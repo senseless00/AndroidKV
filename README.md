@@ -33,9 +33,9 @@ allprojects {
 ```
 
 Step 2. Add the dependency
-[![](https://jitpack.io/v/senseless00/Spannable.svg)](https://jitpack.io/#senseless00/Spannable)
+[![](https://jitpack.io/v/senseless00/AndroidKV.svg)](https://jitpack.io/#senseless00/AndroidKV)
 ```groovy
 dependencies {
-        implementation 'com.github.senseless00:Spannable:Tag'
+        implementation 'com.github.senseless00:AndroidKV:Tag'
 }
 ```
