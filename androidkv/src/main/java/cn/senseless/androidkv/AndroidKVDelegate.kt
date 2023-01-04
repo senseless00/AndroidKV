@@ -1,3 +1,5 @@
+@file:Suppress("UNCHECKED_CAST")
+
 package cn.senseless.androidkv
 
 import kotlin.properties.ReadWriteProperty
