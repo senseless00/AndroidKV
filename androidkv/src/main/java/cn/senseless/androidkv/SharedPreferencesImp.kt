@@ -3,7 +3,7 @@ package cn.senseless.androidkv
 import android.content.Context
 import com.google.gson.Gson
 
-class SharedPreferencesSources(
+class SharedPreferencesImp(
     private val context: Context,
     private val name: String
 ) : Source {
@@ -87,5 +87,13 @@ class SharedPreferencesSources(
 
     override fun contains(key: String): Boolean {
         return sharedPreferences.contains(key)
+    }
+
+    override fun getAll(): Map<String, *> {
+        return sharedPreferences.all
+    }
+
+    override fun clear() {
+        sharedPreferences.edit().clear().apply()
     }
 }

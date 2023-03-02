@@ -8,7 +8,7 @@ object AndroidKV {
     private var source: Source? = null
 
     fun init(context: Context) {
-        init(SharedPreferencesSources(context, "AndroidKV"))
+        init(SharedPreferencesImp(context, "AndroidKV"))
     }
 
     fun init(source: Source) {
@@ -18,6 +18,14 @@ object AndroidKV {
     fun requireSource(): Source {
         return this.source
             ?: throw IllegalArgumentException("未初始化AndroidKV，请在Application的onCreate函数调用未初始化AndroidKV.init()")
+    }
+
+    fun clear() {
+        requireSource().clear()
+    }
+
+    fun getAll(): Map<String, *> {
+        return requireSource().getAll()
     }
 }
 

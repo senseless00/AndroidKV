@@ -37,5 +37,9 @@ interface Source {
 
     fun remove(key: String)
 
-    operator fun contains(key: String): Boolean
+    fun contains(key: String): Boolean
+
+    fun getAll(): Map<String, *>
+
+    fun clear()
 }
