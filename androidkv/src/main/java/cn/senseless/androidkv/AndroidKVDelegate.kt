@@ -60,13 +60,13 @@ class AndroidKVDelegate<T>(
                 AndroidKV.requireSource().putInt(key, value as Int)
             }
             String::class -> {
-                AndroidKV.requireSource().putString(key, value as String)
+                AndroidKV.requireSource().putString(key, value as String?)
             }
             Boolean::class -> {
                 AndroidKV.requireSource().putBoolean(key, value as Boolean)
             }
             Any::class -> {
-                AndroidKV.requireSource().putObject(key, value as Any)
+                AndroidKV.requireSource().putObject(key, value as Any?)
             }
         }
     }
